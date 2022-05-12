@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+}
+
+/* backgrounds */
+
+.dusk {
+    background: url("img/dusk.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation-name: dusk;
+    animation-duration: 3s;
+
+}
+
+.dawn {
+    background: url("img/dawn.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation-name: dawn;
+    animation-duration: 3s;
+}
+
+.noon {
+    background: url("img/afternoon.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation-name: noon;
+    animation-duration: 3s;
+}
+
+.night {
+    background-image: url("img/midnight.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    animation-name: night;
+    animation-duration: 3s;
+}
+
+
+/* animations for each class */
+
+@keyframes dusk {
+    from {
+        background: url("img/afternoon.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    to {
+        background: url("img/dusk.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+@keyframes dawn {
+    from {
+        background: url("img/midnight.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    to {
+        background: url("img/dawn.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+@keyframes noon {
+    from {
+        background: url("img/dawn.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    to {
+        background: url("img/afternoon.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+@keyframes night {
+    from {
+        background: url("img/dusk.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    to {
+        background: url("img/midnight.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+header {
+    background-color: rgba(0, 128, 213, 0.5);
+    padding: 0;
+    height: 110px;
+}
+
+.logo {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: auto;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.flex_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 95%;
+    background-color: transparent;
+    height: 400px;
+}
+
+h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    max-height: 100px;
+}
+
+button {
+    width: 55%;
+    max-width: 60%;
+    border-radius: 5px;
+    border: 3px solid #003355;
+    margin-top: 10px;
+    height: 40px;
+    background-color: #005288;
+    color: white;
+    text-align: center;
+    align-self: flex-end;
+}
+
+p {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#datumtext {
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#timezonetext {
+    text-align: center;
+}
+
+
+/* Tablets custom breakpoint for better responsiveness*/
+@media only screen and (min-width: 525px) {
+
+    h3 {
+        width: 80%;
+    }
+
+    #timezonetext {
+        width: 80%
+    }
+
+    .timer {
+        height: 600px;
+    }
+
+}
+
+/* Laptops  custom breakpoint for better responsiveness*/
+@media only screen and (min-width: 1310px) {
+
+    h3 {
+        font-size: 4em;
+        margin-top: 50px;
+    }
+
+    #timezonetext {
+        font-size: 1.1em;
+    }
+
+    #datumtext {
+        font-size: 1.5em;
+        width: 80%;
+    }
+
+}
+
+/* Desktop  custom breakpoint for better responsiveness*/
+@media only screen and (min-width: 1600px) {
+
+    h3 {
+        font-size: 5em;
+        margin-top: 120px;
+    }
+
+    #timezonetext {
+        font-size: 1.1em;
+    }
+
+    #datumtext {
+        font-size: 1.5em;
+        width: 80%;
+    }
+
+    .timer {
+        height: 800px;
+    }
+}
